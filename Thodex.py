@@ -132,9 +132,9 @@ class ThodexClient:
             }
         }, True, True)
 
-    def cancel_order(self, market: str, order_id: int):
+    def cancel(self, market: str, order_id: int):
         return self.execute({
-            'url': 'v1/market/sell',
+            'url': 'v1/market/cancel',
             'payload': {
                 'market': market,
                 'order_id': order_id,
